@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.7">
+  <diagram name="Page-1" id="NCiMcg2w2jlAD0oHJqWx">
+    <mxGraphModel dx="1097" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4K9Gd76Jad2if9SblOvj-25" edge="1" parent="1" source="4K9Gd76Jad2if9SblOvj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4K9Gd76Jad2if9SblOvj-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client (Postman)" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-26" edge="1" parent="1" source="4K9Gd76Jad2if9SblOvj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4K9Gd76Jad2if9SblOvj-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Express API" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-27" edge="1" parent="1" source="4K9Gd76Jad2if9SblOvj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4K9Gd76Jad2if9SblOvj-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Controllers" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-32" edge="1" parent="1" source="4K9Gd76Jad2if9SblOvj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4K9Gd76Jad2if9SblOvj-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Services" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PostgreSQL" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;HTTP Request (POST /transactions)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="400" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Route handling &amp;amp; validation&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="380" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Business logic&lt;/div&gt;&lt;div&gt;(deposit / withdrawal / transfer)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="270" x="350" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="4K9Gd76Jad2if9SblOvj-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;DB Transaction&lt;/div&gt;&lt;div&gt;- Create Transaction&lt;/div&gt;&lt;div&gt;- Create Ledger Entries&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="240" x="360" y="430" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

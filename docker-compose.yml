@@ -15,9 +15,7 @@ services:
     environment:
       POSTGRES_DB: ledger_db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: dharanisri 
-    ports:
-      - "5432:5432"
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

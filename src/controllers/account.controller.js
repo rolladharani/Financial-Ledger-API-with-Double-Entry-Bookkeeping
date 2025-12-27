@@ -2,17 +2,23 @@ const Account = require('../models/account.model');
 const LedgerEntry = require('../models/ledgerEntry.model');
 const { Sequelize } = require('sequelize');
 
-// CREATE ACCOUNT
 exports.createAccount = async (req, res) => {
   try {
-    const account = await Account.create(req.body);
+    const { user_id, type } = req.body;
+
+    if (!user_id || !type) {
+      return res.status(400).json({
+        message: 'user_id and type are required'
+      });
+    }
+
+    const account = await Account.create({ user_id, type });
     res.status(201).json(account);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-// GET ACCOUNT WITH BALANCE
 exports.getAccountById = async (req, res) => {
   try {
     const account = await Account.findByPk(req.params.id);
@@ -40,14 +46,13 @@ exports.getAccountById = async (req, res) => {
 
     res.json({
       ...account.toJSON(),
-      balance: result.balance
+      balance: result.balance // string
     });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-// GET LEDGER FOR ACCOUNT
 exports.getAccountLedger = async (req, res) => {
   try {
     const entries = await LedgerEntry.findAll({

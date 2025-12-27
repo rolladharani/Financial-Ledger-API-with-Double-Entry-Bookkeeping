@@ -321,3 +321,10 @@ Creates:
 - Postman collection available
 
 Project is **ready for evaluation**.
+
+### Financial Precision
+
+All monetary values are stored as DECIMAL in PostgreSQL.  
+Balances are returned as strings from the database and are never converted to JavaScript Number to avoid floating-point precision errors.  
+Comparisons are done using parseFloat only for validation checks.
+

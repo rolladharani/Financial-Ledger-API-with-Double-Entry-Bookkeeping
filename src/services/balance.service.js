@@ -1,25 +1,29 @@
 const LedgerEntry = require('../models/ledgerEntry.model');
 const { Sequelize } = require('sequelize');
 
-exports.getAccountBalance = async (account_id) => {
-  const result = await LedgerEntry.findAll({
+exports.getAccountBalance = async (account_id, transaction = null) => {
+  const result = await LedgerEntry.findOne({
     where: { account_id },
     attributes: [
       [
         Sequelize.literal(`
-          SUM(
-            CASE 
-              WHEN entry_type = 'credit' THEN amount
-              WHEN entry_type = 'debit' THEN -amount
-              ELSE 0
-            END
+          COALESCE(
+            SUM(
+              CASE
+                WHEN entry_type = 'credit' THEN amount
+                WHEN entry_type = 'debit' THEN -amount
+                ELSE 0
+              END
+            ), 0
           )
         `),
-        'balance',
-      ],
+        'balance'
+      ]
     ],
-    raw: true,
+    transaction,
+    raw: true
   });
 
-  return Number(result[0].balance || 0);
+  // ✅ return as STRING to preserve financial precision
+  return result.balance;
 };
